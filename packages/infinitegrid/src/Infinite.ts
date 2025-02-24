@@ -477,7 +477,7 @@ export class Infinite extends Component<InfiniteEvents> {
     if (!visibleItems.length) {
       return null;
     }
-    const visibleItem = visibleItems[isDirectionEnd ? 0 : length - 1];
+    const visibleItem = visibleItems[isDirectionEnd ? 0 : visibleItems.length - 1];
     const itemPos = isDirectionEnd
       ? Math.min(...visibleItem.startOutline)
       : Math.max(...visibleItem.endOutline);
